@@ -1,0 +1,9 @@
+# Allow since tab completion in bash instead of two tabs
+set show-all-if-ambiguous on
+
+# Scroll through history with up/down arrow
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\e[C": forward-char
+"\e[D": backward-char
+
