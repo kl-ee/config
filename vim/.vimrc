@@ -10,17 +10,23 @@ set t_Co=256
 set hls
 set ruler
 
-set number
-set tabstop=8
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set nopaste
-set autoindent
-set cindent
-set incsearch
-set hlsearch
-set cinoptions=g0
+set wildmenu                    " display command auto complete options
+set wildmode=longest:list,full  " diplay matching list (similar to ls) on first <Tab> then open the wildmenu on the second <Tab>(t
+                                "    - used with ':' commands (i.e. :vs, :sp, :e) followed by a <Tab>
+set nowrap                      " do not wrap lines to start with
+set hls                         " set no highlight search (turn off by using set hls/turn on with nohls)
+set incsearch                   " set so we search as we type
+set ruler                       " ensures each window contains a statusline that displays current cursor position
+set nobackup                    " do not keep a backup file
+set number                      " display line numbers
+set tabstop=8                   " number of spaces that a <Tab> in a file counts for
+set shiftwidth=4                " number of spaces to use for each step of indentation
+set softtabstop=4               " number of spaces that a <Tab> keypress counts for
+set expandtab                   " insert spaces in place of *all* <Tab> keypresses
+set makeprg=make                " go back to using make (instead of pmake)
+set cino=t0,g2,c0,C1            " do not indent function return types, indent public/protected/private by 2,
+                                " do not indent after opening comment(/*), do not indent text after opening comment(/*)
+                                "    (see: http://vimdoc.sourceforge.net/htmldoc/indent.html)
 
 nnoremap<F10> :call ToggleMouseSelect()<CR><Esc>
 function! ToggleMouseSelect()
@@ -56,12 +62,13 @@ nmap <F8> :TagbarToggle<CR>
 " be invoked by doing \v and \s
 "   source $MYVIMRC reloads the saved $MYVIMRC
 nmap <Leader>s :source $MYVIMRC<CR>
-"   opens $MYVIMRC for editing, or use :tabedit $MYVIMRC
-nmap <Leader>v :e $MYVIMRC<CR>
 
 " Change autocomplete colors
 highlight Pmenu ctermbg=27 ctermfg=black
 highlight PmenuSel ctermbg=81 ctermfg=black
+" autocmd VimEnter * hi Pmenu ctermbg=black
+" autocmd VimEnter * hi PmenuSel ctermbg=lightblue
+
 
 " New key mappings for practice
 " > Map 'jk' to <Esc> in insert mode
@@ -81,6 +88,10 @@ vnoremap <right> <nop>
 "inoremap <down> <nop>
 "inoremap <left> <nop>
 "inoremap <right> <nop>
+
+
+" Disable man page hotkey
+nnoremap K <nop>
 
 " Set 80 column limit markers
 "set textwidth=80
