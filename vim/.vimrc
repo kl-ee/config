@@ -4,7 +4,8 @@ filetype plugin on
 filetype indent plugin on
 " colorscheme darkblue
 " colorscheme molokai_k3
-colorscheme molokai
+"colorscheme molokai
+colorscheme wombat256mod_pi
 
 set t_Co=256
 set hls
@@ -74,15 +75,15 @@ highlight PmenuSel ctermbg=81 ctermfg=black
 " > Map 'jk' to <Esc> in insert mode
 inoremap jk <Esc>
 " Normal mode disable arrow keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-" Visual mode disable arrow keys
-vnoremap <up> <nop>
-vnoremap <down> <nop>
-vnoremap <left> <nop>
-vnoremap <right> <nop>
+"nnoremap <up> <nop>
+"nnoremap <down> <nop>
+"nnoremap <left> <nop>
+"nnoremap <right> <nop>
+"" Visual mode disable arrow keys
+"vnoremap <up> <nop>
+"vnoremap <down> <nop>
+"vnoremap <left> <nop>
+"vnoremap <right> <nop>
 "" Insert mode disable arrow keys
 "inoremap <up> <nop>
 "inoremap <down> <nop>
