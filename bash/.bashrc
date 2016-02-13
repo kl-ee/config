@@ -141,6 +141,6 @@ export VISUAL="vim"
 export GREP_COLOR="1;35"
 
 # Temporarily set our compilers
-export CC=/usr/bin/gcc-4.7
-export CXX=/usr/bin/g++-4.7
+export CC=/usr/bin/gcc-4.8
+export CXX=/usr/bin/g++-4.8
 
