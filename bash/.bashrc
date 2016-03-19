@@ -31,6 +31,10 @@ if [ -f $CONFIG_DIR/git/.git-completion.sh ]; then
     . $CONFIG_DIR/git/.git-completion.sh
 fi
 
+if [ -f $CONFIG_DIR/docker/.docker-completion.sh ]; then
+    . $CONFIG_DIR/docker/.docker-completion.sh
+fi
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
