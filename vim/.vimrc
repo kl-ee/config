@@ -11,6 +11,12 @@ syntax on
 filetype plugin indent on
 execute pathogen#infect()
 
+" Setup rainbow parentheses plugin
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
 " Custom settings
 set t_Co=256
 set hls
