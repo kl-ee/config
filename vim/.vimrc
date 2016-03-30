@@ -17,6 +17,9 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
+" Eager load fireplace session
+autocmd BufRead *.clj try | silent! Require | catch /^Fireplace/ | endtry
+
 " Custom settings
 set t_Co=256
 set hls
@@ -107,7 +110,7 @@ nnoremap K <nop>
 
 " Set 80 column limit markers
 "set textwidth=80
-let &colorcolumn=join(range(80,999),",")
+let &colorcolumn=join(range(80,80),",")
 
 " Tell vim to remember certain things when we exit
 " "  '10  :  marks will be remembered for up to 10 previously edited files

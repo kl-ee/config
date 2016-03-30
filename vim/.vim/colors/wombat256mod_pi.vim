@@ -16,7 +16,7 @@ if version > 580
         endif
 endif
 
-let colors_name = "wombat256mod"
+let colors_name = "wombat256mod_pi"
 
 
 " General colors
@@ -36,7 +36,7 @@ hi WarningMsg    ctermfg=203                                 guifg=#ff5f55
 hi ErrorMsg      ctermfg=196    ctermbg=236    cterm=bold    guifg=#ff2026   guibg=#3a3a3a   gui=bold
 hi OverLength    ctermfg=252    ctermbg=198    cterm=none    guifg=#e3e0d7   guibg=#242424   gui=none
 hi WildMenu      ctermfg=252    ctermbg=198    cterm=none    guifg=#e3e0d7   guibg=#242424   gui=none
-hi ColorColumn                  ctermbg=235                                  guibg=#2c2d27
+hi ColorColumn                  ctermbg=237                                  guibg=#2c2d27
 
 " Vim >= 7.0 specific colors
 if version >= 700
