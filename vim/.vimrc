@@ -1,12 +1,17 @@
 set nocompatible
-syntax on
 filetype plugin on
-filetype indent plugin on
 " colorscheme darkblue
 " colorscheme molokai_k3
 "colorscheme molokai
 colorscheme wombat256mod_pi
 
+" Setup Pathogen
+" https://github.com/tpope/vim-pathogen
+syntax on
+filetype plugin indent on
+execute pathogen#infect()
+
+" Custom settings
 set t_Co=256
 set hls
 set ruler
