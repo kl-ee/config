@@ -27,5 +27,8 @@ alias ipy='/usr/bin/ipython'
 export CTAGS_DIR=$BASE_DIR
 alias rctags='cd $BASE_DIR && /usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q $BASE_DIR'
 
+# Emacs
+alias emacs='emacs -nw'
+
 # Misc
 alias refresh='source ~/.bashrc'
