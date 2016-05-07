@@ -13,8 +13,9 @@ dot_dict = {
         '.vim': 'vim',
         '.tmux.conf': 'tmux',
         '.inputrc': 'bash',
-        '.emacs.d': 'emacs'
-        '.spacemacs': 'emacs'
+        '.emacs.d': 'emacs',
+        '.spacemacs': 'emacs',
+        '.lein': 'lein'
 }
 
 print("Base dir:", base_dir)
