@@ -25,7 +25,8 @@ cd emacs-24.5
 make && sudo make install
 popd
 
-
+# Install development software
+sudo apt-get -y install exuberant-ctags cmake ninja-build git
 
 # Install Pathogen for vim (should be in git)
 #mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -36,9 +37,6 @@ git clone https://github.com/kien/rainbow_parentheses.vim.git
 git clone https://github.com/tpope/vim-fireplace.git
 git clone https://github.com/guns/vim-clojure-highlight.git
 popd
-
-# Install development software
-sudo apt-get -y install exuberant-ctags cmake ninja-build git
 
 # Install Python
 sudo apt-get -y install python python-notebook python-pip

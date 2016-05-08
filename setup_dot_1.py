@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import os
 import shutil
 
@@ -8,14 +7,14 @@ config_dir = os.path.join(base_dir, 'config')
 
 # Dictionary that maps {base_dir}/file -> {config_dir}/directory/file
 dot_dict = {
-        '.bashrc': 'bash',
-        '.vimrc': 'vim',
-        '.vim': 'vim',
-        '.tmux.conf': 'tmux',
-        '.inputrc': 'bash',
-        '.emacs.d': 'emacs',
-        '.spacemacs': 'emacs',
-        '.lein': 'lein'
+    '.bashrc': 'bash',
+    '.vimrc': 'vim',
+    '.vim': 'vim',
+    '.tmux.conf': 'tmux',
+    '.inputrc': 'bash',
+    '.emacs.d': 'emacs',
+    '.spacemacs': 'emacs',
+    '.lein': 'lein'
 }
 
 print("Base dir:", base_dir)
