@@ -1,5 +1,7 @@
 # Setup instructions
 
+0) Install git
+
 1) Clone the config repository
 
 2) Run setup_dot_1.py
