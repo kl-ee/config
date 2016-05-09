@@ -31,6 +31,7 @@ sudo apt-get -y install exuberant-ctags cmake ninja-build git
 # Install Pathogen for vim (should be in git)
 #mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 #curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+mkdir vim/.vim/bundle
 pushd vim/.vim/bundle
 git clone https://github.com/guns/vim-clojure-static.git
 git clone https://github.com/kien/rainbow_parentheses.vim.git
@@ -67,15 +68,4 @@ popd
 sudo wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -O /usr/local/bin/lein
 sudo chmod 775 /usr/local/bin/lein
 bash /usr/local/bin/lein
-
-
-# Install docker and containers
-# http://www.tekhead.org/blog/2014/09/docker-part-1-introduction-and-howto-install-docker-on-ubuntu-14-04-lts/
-sudo apt-get -y install apt-transport-https
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
-sudo sh -c "echo deb https://get.docker.io/ubuntu docker main\ > /etc/apt/sources.list.d/docker.list"
-sudo apt-get -y install lxc-docker apparmor
-sudo usermod -aG  docker $USER
-docker pull jenkins
-
 
