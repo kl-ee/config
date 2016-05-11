@@ -3,6 +3,11 @@
 # Pull latest
 sudo apt-get update
 sudo apt-get -y upgrade
+sudo apt-get -y dist-upgrade
+
+# Add user to virtualbox group for mount permissions
+# Note: Requires restart
+sudo adduser $USER vboxsf
 
 # Set up ubuntu 14 properly scaling in virtualbox
 sudo apt-get -y remove libcheese-gtk23
@@ -61,8 +66,17 @@ curl -L  https://github.com/coreos/etcd/releases/download/v2.2.5/etcd-v2.2.5-lin
 tar xzvf etcd-v2.2.5-linux-amd64.tar.gz
 cd etcd-v2.2.5-linux-amd64
 sudo mv etcd etcdctl /usr/local/bin
-sudo cp $CONFIG_DIR/conf/etcd.conf /etc/init
 popd
+######### Upstart ###########
+#sudo cp $CONFIG_DIR/conf/etcd.conf /etc/init
+######### Systemd ###########
+#https://wiki.ubuntu.com/SystemdForUpstartUsers
+#http://askubuntu.com/questions/621246/configure-xvfb-for-vivid-15-04-as-a-service-using-systemd
+sudo cp systemd/etcd.service /etc/systemd/system/etcd.service
+sudo cp systemd/etcd.service /etc/systemd/system/multi-user.target.wants/etcd.service
+sudo systemctl enable /etc/systemd/system/etcd.service
+sudo service etcd start
+#### END upstart/systemd ####
 
 # Install Leiningen (clojure)
 sudo wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -O /usr/local/bin/lein
