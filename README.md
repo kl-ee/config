@@ -1,14 +1,24 @@
 # Setup instructions
 
-0) Install git
+1) Set up bidirectional clipboard/shared folders
 
-1) Clone the config repository
+2) Install Guest Additions(allow copy/paste)
+    http://askubuntu.com/questions/22743/how-do-i-install-guest-additions-in-a-virtualbox-vm
+    i.e. Devices->Insert Guest Additions
 
-2) Run setup_dot_1.py
+2.1) Restart
 
-3) Run setup_linux_2.sh
+3) Set up SSH keys(load them into github)
 
-4) "Run" setup_docker_3.sh (Run twice - restart required)
+4) Install git
 
-5) "Run" setup_docker_4.sh (Edit the file for what we have/want)
+5) Clone the config repository
+
+6) Run setup_dot_1.py
+
+7) Run setup_linux_2.sh
+
+8) "Run" setup_docker_3.sh
+
+9) "Run" setup_docker_4.sh (Run twice - Edit the file for what we have/want)
 
